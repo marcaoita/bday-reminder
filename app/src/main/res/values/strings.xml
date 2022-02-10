@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">agendalist</string>
+
+    <string-array name="contact_name">
+        <item>"Marcones Adrenalinas"</item>
+        <item>"Marcao Adrenalina"</item>
+        <item>"Adrenalinas Marcks"</item>
+    </string-array>
+
+    <string-array name="contact_phone">
+        <item>"+5561998768686"</item>
+        <item>"+5561998766868"</item>
+        <item>"+5561998766886"</item>
+    </string-array>
+
+</resources>
