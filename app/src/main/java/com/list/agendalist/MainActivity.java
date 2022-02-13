@@ -1,27 +1,38 @@
 package com.list.agendalist;
 
-import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActivity extends Activity{
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        setTitle("Contact List");
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#E65232")));
+        actionBar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Bdays</font>"));
+
         //contacts is the object (list) that holds the data (strings with names)
 //        List<contactBuilder> contacts = new ArrayList<>();
         ArrayList<contactBuilder> contacts = new ArrayList<>();
 
-        ListView contactList = findViewById(R.id.listView);
+        ListView contactList = findViewById(R.id.activity_main_contactlist);
 
         String[] contactName = getResources().getStringArray(R.array.contact_name);
         String[] contactPhone = getResources().getStringArray(R.array.contact_phone);
